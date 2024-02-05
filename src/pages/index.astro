@@ -1,5 +1,7 @@
 ---
+import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+const allProjects = await Astro.glob('../pages/projects/*.md');
 const pageTitle = "Tamarisk Mendoza";
 ---
 <Layout pageTitle={pageTitle}>
@@ -10,44 +12,48 @@ const pageTitle = "Tamarisk Mendoza";
     <small>Lead Generation Specialist</small>
     <h2>About</h2>
     <p>
-        Praesent malesuada mi nisi, quis tempus magna venenatis ut.
-        Suspendisse tempor sem at scelerisque congue. Curabitur mollis,
-        mi id molestie finibus, metus sem sagittis nunc, euismod feugiat orci neque non lorem.
-        Aenean sollicitudin erat eu molestie tempus. Nunc ac eros elementum, fermentum lacus at,
-        pellentesque mauris. Suspendisse eros neque, interdum euismod consectetur convallis,
-        porttitor at massa. Phasellus a ultrices arcu. Donec viverra, lorem in pellentesque euismod,
-        libero justo gravida nibh, non ultricies justo purus ultrices est.
+        Passionate about lead generation, I excel in employing diverse and
+        effective strategies to consistently deliver high-quality leads.
+        With a keen understanding of the ever-evolving digital world,
+        I leverage my skills to drive meaningful results and contribute to the success of businesses.
     </p>
-    <p>
-        Ut at interdum dui. Donec ut ante ex. Maecenas id ex eget nibh consequat accumsan.
-        Proin semper semper dui nec feugiat. Donec cursus neque id aliquet finibus. Morbi
-        facilisis turpis nibh, nec dictum orci dictum nec. In hac habitasse platea dictumst.
-        Maecenas mollis turpis vitae turpis bibendum, vitae tristique arcu eleifend.
-    </p>
-    <div class="button">
-        <a href="/works/">
-            <button class="button">My portfolio</button>
-        </a>
-    </div>
     <h2>Skills</h2>
-    <div class="link-images">
-        <img width="46" height="46" alt="C#" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg"/>
-        <img width="46" height="46" alt="DotNetCore" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"/>
-        <img width="46" height="46" alt="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"/>
-        <img width="46" height="46" alt="Angular" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg"/>
-        <img width="46" height="46" alt="Bootstrap" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"/>
-        <img width="46" height="46" alt="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"/>
-        <img width="46" height="46" alt="HTML" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"/>
-        <img width="46" height="46" alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/>
-        <img width="46" height="46" alt="PostGres" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg"/>
+    <ul>
+        <li>Data Analysis</li>
+        <li>Market Research</li>
+        <li>SEO Knowledge</li>
+        <li>Email Marketing</li>
+        <li>Content Marketing</li>
+        <li>Communication</li>
+        <li>Lead Nurturing</li>
+    </ul>
+    <h2>Tools</h2>
+    <ul>
+        <li>Apollo.io</li>
+        <li>Wiza.co</li>
+        <li>SalesQL</li>
+        <li>Instant Data Scraper</li>
+        <li>RocketReach</li>
+        <li>Mailchimp</li>
+        <li>Canva</li>
+        <li>Google Workspace</li>
+        <li>Wordpress</li>
+        <li>Quillbot</li>
+        <li>ChatGPT</li>
+        <li>SharpSpring</li>
+    </ul>
+    <div class="gif">
+        <img width="300" height="259" alt="RaccoonLaptopGif" src="/laptop.webp"/>
     </div>
-    <h2>Interests</h2>
-    <p>
-        Ut at interdum dui. Donec ut ante ex. Maecenas id ex eget nibh consequat accumsan.
-        Proin semper semper dui nec feugiat. Donec cursus neque id aliquet finibus. Morbi
-        facilisis turpis nibh, nec dictum orci dictum nec. In hac habitasse platea dictumst.
-        Maecenas mollis turpis vitae turpis bibendum, vitae tristique arcu eleifend.
-    </p>
+    <h2>Sample Works</h2>
+    <ul role="list" class="link-card-grid">
+        {allProjects.map((card) => <Card 
+            url={card.frontmatter.website} 
+            image={card.frontmatter.image.url} 
+            title={card.frontmatter.title} 
+            body={card.frontmatter.description}
+        />)}
+    </ul>
 </Layout>
 <style>
     /* small */
