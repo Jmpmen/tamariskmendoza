@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/MarkdownWorksLayout.astro
-title: 'Project 4'
+title: 'Work 4'
 description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
 image:
-    url: '/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: '/image-4.png'
+    alt: 'Work 4'
 worksImage1:
     url: '/image-1.webp'
     alt: 'first image of your project.'
@@ -13,7 +13,7 @@ worksImage2:
     alt: 'second image of your project.'
 platform: Web
 stack: Astro, JavaScript
-website: https://astro-milky-way.netlify.app/
+website: https://docs.google.com/spreadsheets/d/1ed3I0NxYb_a6YAjg-A9zC04AG628H7ubip5WdUeapwY/edit?usp=sharing
 github: https://github.com/ttomczak3/Milky-Way
 ---
 
