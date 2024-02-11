@@ -29,8 +29,9 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Paragraphs */
-p {
+/* Paragraphs, Unordered list */
+p,
+ul>li {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.1em;
     hyphens: auto;
@@ -38,6 +39,9 @@ p {
     text-indent: 1em;
 }
 
+ul {
+    columns: 2;
+}
 
 /* Gifs */
 .gif {
