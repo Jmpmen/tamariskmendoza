@@ -180,6 +180,10 @@ html.light {
         width: 320px;
     }
 
+    ul {
+        columns: 1;
+    }
+    
     .nav-bar {
         display: initial;
     }
